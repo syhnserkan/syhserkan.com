@@ -1,0 +1,32 @@
+[
+  {
+    "redirectUrl": "https://github.com/syhnserkan/personal-blog-client",
+    "unicodeIcon": "🌈",
+    "leftSide": "Personal Blog",
+    "rightSide": "Personal blog project was created by Oğuzhan Olguncu and me."
+  },
+  {
+    "redirectUrl": "https://github.com/syhnserkan/Twitter-with-React",
+    "unicodeIcon": "🌃",
+    "leftSide": "Twitter Design",
+    "rightSide": "I made the twitter clone with React.js and styled component. You can check it out."
+  },
+  {
+    "redirectUrl": "https://play-tic-tac-toe-react.netlify.app/",
+    "unicodeIcon": "🌳",
+    "leftSide": "Tic tac toe",
+    "rightSide": "I developed Tic tac toe game for improve my react skills."
+  },
+  {
+    "redirectUrl": "https://quiz-app-with-react.netlify.app/",
+    "unicodeIcon": "⏰",
+    "leftSide": "Quiz App",
+    "rightSide": "Quiz app written in React.js."
+  },
+  {
+    "redirectUrl": "https://weather-api-with-js.netlify.app/",
+    "unicodeIcon": "🌂",
+    "leftSide": "Weather App",
+    "rightSide": "Weather app show the weather forecast and you can look the different city weather."
+  }
+]

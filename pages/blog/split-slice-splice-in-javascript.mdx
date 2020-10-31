@@ -1,0 +1,62 @@
+---
+title: 'What is the difference splice, slice, and split method in Javascript ?'
+publishedAt: '2020-10-30'
+summary: 'Introduction  Today we will talk about split, slice, and splice method.'
+image: '/static/images/split-slice-splice-in-javascript/background.png'
+languageTags: ['javascript', 'tutorial', 'webdev']
+isPopular: true
+guides: true
+---
+
+![Alt Text](/static/images/split-slice-splice-in-javascript/background.png)
+
+Today, I want to talk about **split()**, **splice()**, and **slice()** method. You know there are lots of functions with scarily similar names in land of javascript. That's why javascript methods can be confused each other sometimes.
+
+## Split()
+
+Split is a function that split the given string into an array of substrings. The split method doesn't change the original string array and will return the new array.
+
+### Example
+
+![Alt Text](/static/images/split-slice-splice-in-javascript/1.png)
+
+![Alt Text](/static/images/split-slice-splice-in-javascript/2.png)
+
+## Slice()
+
+Slice method doesn't change the original array. It is method of both arrays and strings. Slice method can take two arguments. First argument is required, second argument is optional.
+
+- First argument that represent where to start selection.
+- Second argument that represent where to end selection.
+
+### Example
+
+![Alt Text](/static/images/split-slice-splice-in-javascript/3.png)
+
+![Alt Text](/static/images/split-slice-splice-in-javascript/4.png)
+
+## Splice()
+
+Splice method changes the original array. It can remove element, replace existing elements, or add new elements to array. It can take 3+ arguments.
+
+- First argument is index and requried.
+- Second argument is optional and represent the number of items be removed.
+- Third argument is optional and represent the number of items be added. Argument can be increased.
+
+Sometimes we want to remove items from array and we can use **pop()** and **shift()** methods instead of **splice()** method. But it is easy to use and we can remove more than one item or add to the array.
+
+### Example 1
+
+![Alt Text](/static/images/split-slice-splice-in-javascript/5.png)
+
+![Alt Text](/static/images/split-slice-splice-in-javascript/6.png)
+
+### Example 2
+
+![Alt Text](/static/images/split-slice-splice-in-javascript/7.png)
+
+![Alt Text](/static/images/split-slice-splice-in-javascript/8.png)
+
+## Conclusion
+
+**Split()** method is used for strings array, **slice()** method is used for both arrays and strings. **Splice()** method is used for only arrays.

@@ -1,0 +1,44 @@
+
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>Oğuzhan Olguncu – Developer, writer, creator.</title>
+      <link>https://ogzhanolguncu.com/blog</link>
+      <description>[...]</description>
+      <language>en</language>
+      <lastBuildDate>Fri, 30 Oct 2020 00:00:00 GMT</lastBuildDate>
+      <atom:link href="https://ogzhanolguncu.com/rss.xml" rel="self" type="application/rss+xml"/>
+      
+  <item>
+    <guid>https://ogzhanolguncu.com/blog/split-slice-splice-in-javascript</guid>
+    <title>What is the difference splice, slice, and split method in Javascript ?</title>
+    <link>https://ogzhanolguncu.com/blog/split-slice-splice-in-javascript</link>
+    <description>Introduction  Today we will talk about split, slice, and splice method.</description>
+    <pubDate>Fri, 30 Oct 2020 00:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <guid>https://ogzhanolguncu.com/blog/using-async-await-the-right-way</guid>
+    <title>Using Async/Await: The right way</title>
+    <link>https://ogzhanolguncu.com/blog/using-async-await-the-right-way</link>
+    <description>Hash tables are incredibly powerful and versatile beasts. They let you store your data in a key-value... Tagged with javascript, computerscience, tutorial, datastructure, typescript</description>
+    <pubDate>Fri, 23 Oct 2020 00:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <guid>https://ogzhanolguncu.com/blog/quicksort-in-javascript</guid>
+    <title>Quicksort In Javascript</title>
+    <link>https://ogzhanolguncu.com/blog/quicksort-in-javascript</link>
+    <description>Have you ever wondered why Quicksort called quick? Because it's one of the fastest sorting algorithms out there. Tutorial in Javascript/Typescript.</description>
+    <pubDate>Fri, 23 Oct 2020 00:00:00 GMT</pubDate>
+  </item>
+
+  <item>
+    <guid>https://ogzhanolguncu.com/blog/binary-search-in-javascript</guid>
+    <title>Binary Search In Javascript</title>
+    <link>https://ogzhanolguncu.com/blog/binary-search-in-javascript</link>
+    <description>Today, we are going to learn how to perform a binary search in Javascript and talk a little about O n... Tagged with javascript, datastructures, webdev, computerscience.</description>
+    <pubDate>Fri, 23 Oct 2020 00:00:00 GMT</pubDate>
+  </item>
+
+    </channel>
+  </rss>
