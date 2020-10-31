@@ -1,16 +1,7 @@
-## ogzhanolguncu.com
+## syhnserkan.com
 
 Personal blog built using __Chakra UI__, __Typescript__ and __Next.js__. Used MDX for blogs, Context Api for custom color changes and next-seo for SEO.
 Feel free to copy and use.
-
-## Running Locally
-
-```bash
-$ git clone https://github.com/ogzhanolguncu/ogzhanolguncu.com.git
-$ ogzhanolguncu.com
-$ yarn
-$ yarn dev
-```
 
 ## Built Using
 
