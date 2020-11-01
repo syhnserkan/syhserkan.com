@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://syhnserkan.com/blog/binary-search-in-javascript</loc>
-  </url>
-
-  <url>
-    <loc>https://syhnserkan.com/blog/quicksort-in-javascript</loc>
-  </url>
-
-  <url>
     <loc>https://syhnserkan.com/blog/split-slice-splice-in-javascript</loc>
   </url>
 
