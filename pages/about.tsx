@@ -60,17 +60,31 @@ const About = () => {
             About me
           </Heading>
           <CustomText>
-            Hi! I'm Serkan. I currently work full-time as a Frontend Developer, and I build
-            {''}
-            <TextLink text=" open-source projects " url="https://github.com/syhnserkan" /> for fun.
+            Hi! I'm Serkan. I was born in 1999. I live in İstanbul and study as a Computer
+            Engineering student. I like to build
+            <TextLink text=" open-source projects " url="https://github.com/syhnserkan" /> for fun
+            an experience.
           </CustomText>
           <CustomText>
-            I taught myself how to make websites first as a hobby and later as a professional
-            programmer. I've been documenting everything I learn since I began.
+            When I start university, I didn't know anything about programming. I wrote C/C++ for
+            algorithm in the first year. After the first year, I started to write C# for desktop
+            applications. But I realized, desktop applications are not written very much. When I
+            passing to the third grade, I taught myself how to make websites first as a hobby and
+            later as a professional programmer. Firstly, I started frontend technologies like HTML,
+            CSS and Javascript. After that I took a brief look at Jquery but I didn't like it.
+            {/* I taught myself how to make websites first as a hobby and later as a professional
+            programmer. I've been documenting everything I learn since I began. */}
           </CustomText>
           <CustomText>
-            I also like to make open source projects, all of which can be found on github and I'm
-            also huge classical turkish music lover and recreational powerlifter.
+            What did I learn for backend ? I learned Asp.NET MVC, entity framework, and MSSQL.
+          </CustomText>
+          <CustomText>
+            Nowadays, I have mostly worked React.js, Next.js, Typescript, and Css frameworks (Sass,
+            Chackra UI, Styled-Component).
+          </CustomText>
+          <CustomText>
+            I like building new stuff and make open source projects, all of which can be found on
+            github.
           </CustomText>
 
           <Heading
@@ -135,32 +149,27 @@ const About = () => {
             }
           >
             <ListItem>
-              <strong>1996:</strong> Born in Istanbul, the only child of my family.
+              <strong>1999:</strong> I was born in Istanbul, the last child of my family.
             </ListItem>
             <ListItem>
-              <strong>2006 – 2010:</strong> The family gets our first computer, a PC running
-              Windows. I use the computer a lot, mostly silly stuff since I had no idea what was
-              going on.
+              <strong>2006 – 2013:</strong> I went to primary school. I loved the math. The family
+              gets our first computer, a PC running Windows. I use the computer a lot, mostly silly
+              stuff since I had no idea what was going on.
             </ListItem>
             <ListItem>
-              <strong>2010 - 2014:</strong> I started my technical high school. Studied information
-              technologies, started to learn lots of things about computers and especially about web
-              development because it was the branch I chose to study. Coded websites using HTML
-              tables, good old days :) .
+              <strong>2013 - 2017:</strong> I started my anatolian high school. When I start the
+              high school, I was self-conscious. That's why I used to play computer games a lot.
+              Computer games, started to learn lots of things about computers. After the university
+              exams, I had to choose department that I could love and I chose Computer Engineering.
             </ListItem>
             <ListItem>
-              <strong>2015:</strong> I go to university for Information Management Systems. Due to
-              my major's nature I studied both management and IT. I've taken core computer science
-              courses such as Data structures, Computer Architecture, Algorithm Analysis and
-              Database Management.
+              <strong>2017 - 2020:</strong> I started to study Computer Engineering at Istanbul Arel
+              University. I've taken core computer science lessons such as Algorithms and
+              Programming, Data Structures, Object Oriented Programming and Database Management.
             </ListItem>
             <ListItem>
-              <strong>2016:</strong> At the last quarter of 2016, I started work as a full time
-              Fullstack .Net developer and honed my overall skills.
-            </ListItem>
-            <ListItem>
-              <strong>2020 – Present:</strong> I was bored working as a full stack developer. I've
-              chosen a different path and became a Frontend Developer.
+              <strong>2020 – Present:</strong> I am a final year of student. I develop my frontend
+              skills such as React.js.
             </ListItem>
           </List>
         </Flex>
