@@ -18,7 +18,13 @@ Split is a function that split the given string into an array of substrings. The
 
 ### Example
 
-![Alt Text](/static/images/split-slice-splice-in-javascript/1.png)
+```javascript
+let text = 'This text is gonna be nice.';
+console.log(text.split()); // If the split function is empty, string array will return a text array
+console.log(text.split('')); // return a new array without a space
+console.log(text.split(' ')); // returns a new array with space
+console.log(text.split(' ', 2)); // returns a new array with 2 limits.
+```
 
 ![Alt Text](/static/images/split-slice-splice-in-javascript/2.png)
 
@@ -31,7 +37,18 @@ Slice method doesn't change the original array. It is method of both arrays and 
 
 ### Example
 
-![Alt Text](/static/images/split-slice-splice-in-javascript/3.png)
+```javascript
+let text = 'This text is gonna be nice.';
+console.log(text.slice(0, 15)); // gives part of array 0-15.
+console.log(text.slice(7, 19)); // gives part of array 7-19.
+console.log(text.slice(-8)); // gives part of end of the array.
+
+let carLists = ['Togg', 'Renault', 'Honda', 'Hyundai', 'Porsche'];
+console.log(carLists.slice(0, 3)); // gives three element from the beggining of array.
+console.log(carLists.slice(0, 1)); // gives the first element
+console.log(carLists.slice(1)); // If you don't give the index, It will return rest of the array.
+console.log(carLists); // still gives original array.
+```
 
 ![Alt Text](/static/images/split-slice-splice-in-javascript/4.png)
 
@@ -47,13 +64,25 @@ Sometimes we want to remove items from array and we can use **pop()** and **shif
 
 ### Example 1
 
-![Alt Text](/static/images/split-slice-splice-in-javascript/5.png)
+```javascript
+let carLists = ['Togg', 'Renault', 'Hyundai', 'Opel', 'Porsche'];
+console.log(carLists.splice(0, 2)); // removed items from array.
+console.log(carLists);
+console.log(carLists.splice(0)); //removed all of the items from array.
+console.log(carLists);
+```
 
 ![Alt Text](/static/images/split-slice-splice-in-javascript/6.png)
 
 ### Example 2
 
-![Alt Text](/static/images/split-slice-splice-in-javascript/7.png)
+```javascript
+let carLists = ['Togg', 'Renault', 'Hyundai', 'Opel', 'Porsche'];
+console.log(carLists.splice(2, 0, 'Audi')); // added Audi item after the second item and 0 items removed
+console.log(carLists);
+console.log(carLists.splice(1, 2, 'Dacia', 'Volvo')); // removed 2 items after first element and 2 items added.
+console.log(carLists);
+```
 
 ![Alt Text](/static/images/split-slice-splice-in-javascript/8.png)
 
