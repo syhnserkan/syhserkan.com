@@ -63,7 +63,7 @@ const About = () => {
             Hi! I'm Serkan. I was born in 1999. I live in İstanbul and study as a Computer
             Engineering student. I like to build
             <TextLink text=" open-source projects " url="https://github.com/syhnserkan" /> for fun
-            an experience.
+            and experience.
           </CustomText>
           <CustomText>
             When I start university, I didn't know anything about programming. I wrote C/C++ for
