@@ -5,23 +5,23 @@
       <link>https://syhnserkan.com/blog</link>
       <description>[...]</description>
       <language>en</language>
-      <lastBuildDate>Sun, 08 Nov 2020 21:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Tue, 10 Nov 2020 00:00:00 GMT</lastBuildDate>
       <atom:link href="https://syhnserkan.com/rss.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>https://syhnserkan.com/blog/map-reduce-filter-method-in-javascript</guid>
+    <title>Using map, reduce, filter and find method in Javascript</title>
+    <link>https://syhnserkan.com/blog/map-reduce-filter-method-in-javascript</link>
+    <description>Today, We will talk about map, reduce, filter and find method in javascript.</description>
+    <pubDate>Tue, 10 Nov 2020 00:00:00 GMT</pubDate>
+  </item>
+
   <item>
     <guid>https://syhnserkan.com/blog/split-slice-splice-in-javascript</guid>
     <title>What is the difference splice, slice, and split method in Javascript ?</title>
     <link>https://syhnserkan.com/blog/split-slice-splice-in-javascript</link>
     <description>Introduction  Today we will talk about split, slice, and splice method.</description>
-    <pubDate>Sun, 08 Nov 2020 21:00:00 GMT</pubDate>
-  </item>
-
-  <item>
-    <guid>https://syhnserkan.com/blog/map-reduce-filter-method-in-javascript</guid>
-    <title>Using map, reduce, filter and find method in Javascript</title>
-    <link>https://syhnserkan.com/blog/map-reduce-filter-method-in-javascript</link>
-    <description></description>
-    <pubDate>Tue, 10 Nov 2020 00:00:00 GMT</pubDate>
+    <pubDate>Fri, 30 Oct 2020 00:00:00 GMT</pubDate>
   </item>
 
     </channel>
