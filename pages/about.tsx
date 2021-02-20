@@ -45,9 +45,9 @@ const About = () => {
           flexDirection="column"
           justifyContent="center"
           alignItems="flex-start"
-          maxW="80%"
+          maxW={['100%','100%','80%','80%']}
           mx="auto"
-          p="0 2rem"
+          p={['0 0', '0 0', '0 2rem', '0 2rem']}
         >
           <Heading
             textAlign="center"
