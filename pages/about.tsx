@@ -169,7 +169,7 @@ const About = () => {
             </ListItem>
             <ListItem>
               <strong>2020 – Present:</strong> I am a final year of student. I develop my frontend
-              skills such as React.js.
+              skills such as React.js and Redux.
             </ListItem>
           </List>
         </Flex>
