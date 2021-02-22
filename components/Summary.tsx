@@ -158,7 +158,7 @@ const Summary = ({ gotoNewsletter }: Props) => {
           </Button>
         </Box>
       </Box>
-      <Box margin={['auto 0', '10px 0', '10px 20px', '10px 20px']}>
+      <Box margin={['auto 0', '10px 0', '10px 0', '10px 0']}>
         <Image
           src={profile}
           alt="Owl"
