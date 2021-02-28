@@ -85,8 +85,8 @@ const ArticleLists = ({ blogs, isPopular = false }: Props) => {
                         New!
                       </Tag>
                     ) : null}
-                    <Box>
-                      <Text color="#787f87" fontSize=".8rem" fontWeight="600">
+                    <Box w={['300px', '300px', '400px', '600px']}>
+                      <Text w="100%" color="#787f87" fontSize=".8rem" fontWeight="600">
                         {blog.publishedAt}
                       </Text>
                       <Heading fontSize={['1rem', '1.1rem', '1.15rem', '1.15rem']}>

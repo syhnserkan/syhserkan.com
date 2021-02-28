@@ -1,0 +1,405 @@
+---
+title: 'Sass Tutorial'
+publishedAt: '2021-02-28'
+summary: 'Today, We will talk about sass. What is preprocessor ? What is sass? and more than...'
+image: '/static/images/sass-tutorial/sass-logo.jpg'
+languageTags: ['css', 'tutorial', 'scss']
+isPopular: false
+guides: true
+---
+
+![cover](/static/images/sass-tutorial/sass-logo.jpg)
+
+If you ever had to write css, you have must heard sass or preprocessor. What is preprocessor ? A CSS preprocessor is a program that lets you generate CSS from the preprocessor's own unique syntax.
+There are many CSS preprocessor to choose but most popular is Sass. That's why we are going to talk about Sass.
+
+### What is Sass ?
+
+Before speaking from the Sass, firstly I want to talk about why should I use Sass. CSS on its own can be fun, but stylesheets are getting larger, more complex and harder to maintain. That's why we use preprocessors.
+Sass is a CSS preprocessor which makes writing CSS more faster and efficient.
+So to sum up;
+
+- SASS (Synthetically Awesome Style Sheet)
+- CSS Preprocessor / Extension
+- There are bunch of features that don't exist in CSS.
+
+If you want to use Sass in your project, you can check it out [documentation](https://sass-lang.com/install).
+
+When you come to this section, you can see different methods and different file extensions.
+
+- We have .scss file which is what we will be using. That's like a regular CSS. It has the curly braces as you can see on the code.
+- We also have other option that is .sass file. We use indentation instead of using curly braces. I don't like to use it like other developers.
+
+### SCSS
+
+```scss
+//base.scss
+$font-stack: 'Open Sans', sans-serif;
+$primary-color: #e0ffff;
+
+.container {
+  max-width: 1100px;
+  padding: 0 30 px;
+  margin: 0 auto;
+  overflow: auto;
+
+  section {
+    display: flex;
+    justify-content: center;
+  }
+}
+```
+
+### SASS
+
+```sass
+//base.sass
+$font-stack: 'Open Sans', sans-serif
+$primary-color: #e0ffff
+
+.container
+  max-width: 1100px
+  padding: 0 30 px
+  margin: 0 auto
+  overflow: auto
+    section
+      display: flex
+      justify-content: center
+```
+
+### Variables In SCSS
+
+Variables store data. You can save any **CSS value** using **$** symbol.
+
+- Prefixed with a **$**
+- **$secondary : red**
+- In SCSS easier to read and write than CSS custom properties.
+
+```scss
+$primary-color: red;
+$font-stack: Nunito, sans-serif;
+$max-width: 1200px;
+
+body {
+  color: $primary-color;
+  font-family: $font-stack;
+  width: 100%;
+  max-width: $max-width;
+}
+```
+
+### Nesting
+
+Nesting is of the main reasons that developers like to use sass instead of repeating the CSS selector with children elements like **ul li**, **ul li a**.
+Instead of using css selector you can simply nest that the child selectors in the parent.
+
+```scss
+.container {
+  display: flex;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+
+    li {
+      padding: 20px;
+      text-align: center;
+    }
+  }
+}
+```
+
+Keep in mind, using much deeper nesting, the CSS file can become much larger and browsers will need to do more work to style the elements. That's why try to keep the selectors shallow.
+If you work a big project on company, this can save a huge amount of bandwith.
+Apart from these, you can use **&** in nesting. **&** always refers to upper selection. For example;
+
+```scss
+ul {
+  li {
+    color: red;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.container {
+  background-color: red;
+  &-content {
+    //&-content is .container-content
+    background-color: green;
+  }
+}
+```
+
+### Modules
+
+When we come to modules, we can see **@import** rule (old way) and new **@use** rule. If you look at the SASS documentation, you can see lots of heads up.
+
+![cover](/static/images/sass-tutorial/heads-up.png)
+
+Let's start modules, you don't have to write all your sass in a single file. You can split up with @use rule.
+This rule leads another sass file as a module which means you can refer to its variables, mixins and functions in your sass file.
+
+```scss
+@use "base";
+
+.container {
+  background-color: base.$primary-color;
+}
+```
+
+When we talk about these module types, we can see differenceses between **@use** and **@import**:
+
+- **@use** only runs a stylesheet and includes its CSS once, no matter how many times that stylesheed is used.
+- This module only makes names available in the current stylesheet instead of globally.
+- Don't forget whose names begin with **-** or **\_** are private to the current stylesheet with @use.
+
+### Namespaces
+
+This feature very important using **@use**. Think about it. We have two files that will use as a partial and they have same features by accidentally.
+
+```scss
+//_base-component.scss
+$width: 100%;
+
+//_buttons-component.scss
+$width: 600px;
+```
+
+If we use **@import** to bring these variables, we'll get some issues. **@import** will always get the latest imported file features.
+
+```scss
+@import 'base-component';
+@import 'buttons-component';
+
+.container {
+  width: $width; // It will be 600px
+}
+
+.button {
+  width: $width; // 600px
+}
+```
+
+In other hand, If you use **@use**, you don't get any issue like that.
+
+```scss
+@use 'base-component';
+@use 'buttons-component';
+
+.container {
+  width: base-component.$width;
+}
+.button {
+  width: buttons-component.$width;
+}
+```
+
+You can use shortcut when using **@use** keyword.
+
+```scss
+@use 'base-component' as base;
+@use 'buttons-component' as buttons;
+
+.container {
+  width: base.$width;
+}
+.button {
+  width: buttons.$width;
+}
+```
+
+You can even promoto modules to the top-level namespace using as \*.
+
+```scss
+@use 'base-component' as *;
+
+.container {
+  width: $width;
+}
+```
+
+**NOT :** Be carefull using ** \* **, **@use** acts like **@import**.
+
+### Mixins & Functions
+
+Mixins and functions are not the same but they are similar.
+If you use mixin, you can type in reusable blocks of code into the mixin and reuse it over and over again.
+Mixin can take an argument but it's not required.
+
+Let's look at some examples.
+
+```scss
+//_config.scss;
+@mixin center-block {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//In other file
+@use "config" as cf;
+
+.container {
+  @include cf.center-block();
+}
+```
+
+### Mixins with arguments
+
+We can use mixins with arguments. Let's see example.
+
+```scss
+//_config.scss;
+@mixin set-background($color) {
+  background-color: $color;
+}
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+//In other file
+@use "config" as cf;
+
+.container {
+  @include cf.set-background(#fff);
+  @include cf.transform(rotate(30deg));
+}
+```
+
+### Functions
+
+As we said before, sass functions look similar to mixins but they are different. In sass, mixins return a block of code that can be used over and over again.
+For functions, they return a specific value. Single values, not blocks of code.
+
+> **NOT : ** Functions have a return statemant, just like javascript but mixins do not.
+> Let's look at example.
+
+```scss
+//_config.scss
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return #333;
+  } @else {
+    @return $fff;
+  }
+}
+//In other file
+@use "config" as cf;
+ul {
+  li {
+    background-color: set-text-color(#e0ffff);
+  }
+}
+```
+
+### Some Flow Control
+
+As we was talking about mixins we used **@if and @else**. That's why I'll pass these. Let's see **@each** rule.
+
+@each rule makes it easy to emit styles or evaluate code for each element of a list. **@each $variable in $expression {...}**, where the expression returns a list. For example;
+
+```scss
+// Margin classes
+$spaceamounts: (1, 2, 3);
+
+@each $space in $spaceamounts {
+  .m-#{$space} {
+    margin: #{$space}rem;
+  }
+  .my-#{$space} {
+    margin: #{$space}rem 0;
+  }
+  .mx-#{$space} {
+    margin: 0 #{$space}rem;
+  }
+}
+```
+
+**Converted CSS codes**
+
+```css
+.m-1 {
+  margin: 1rem;
+}
+.my-1 {
+  margin: 1rem 0;
+}
+.mx-1 {
+  margin: 0 1rem;
+}
+.m-2 {
+  margin: 2rem;
+}
+.my-2 {
+  margin: 2rem 0;
+}
+.mx-2 {
+  margin: 0 2rem;
+}
+.m-3 {
+  margin: 3rem;
+}
+.my-3 {
+  margin: 3rem 0;
+}
+.mx-3 {
+  margin: 0 3rem;
+}
+```
+
+In other hand we have another flow controls like **@for and @while** but we don't use so much. That's why I don't talk about these.
+
+### Extend & Inheritance
+
+This feature is one of the most useful feature in sass. This allows you to intherit a block of code in a specific selector. It extends the same code into the new selector.
+
+> **NOT : ** A placeholder class is a special type of class that only prints when it is extended, and can help keep your compiled CSS neat and clean.
+
+```scss
+%message-shared {
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  margin: 10px 15px;
+}
+.success-message {
+  @extend %message-shared;
+  border-color: green;
+}
+.error-message {
+  @extend %message-shared;
+  border-color: red;
+}
+.warning-message {
+  @extend %message-shared;
+  border-color: yellow;
+}
+```
+
+### Operators
+
+This feature allows us to use math in your css. We can give ** +, -, /, \*, % ** operators as an example.
+
+```scss
+$width: 1200px;
+
+.container {
+  width: $width-200px;
+}
+
+.content {
+  width: $width / 6;
+}
+```
+
+Finally, we are ready to write scss instead of css. Now, we can do more practice to improve scss skill. You can check it out sass documentation for see lots of example.
+
+## Thanks for reading, and hope you enjoyed 🙃

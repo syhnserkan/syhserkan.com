@@ -9,7 +9,6 @@ type Props = {
 };
 
 const Layout = ({ children }: Props) => {
-  
   return (
     <>
       <Navbar />
